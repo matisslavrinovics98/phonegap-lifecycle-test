@@ -50,3 +50,5 @@ function updateDisplay() {
 	window.localStorage.setItem( key, value );
 	
 	var value = window.localStorage.getItem(key);
+	
+	document.getElementById("myText").innerHTML = value;
