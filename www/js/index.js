@@ -2,6 +2,7 @@ var paused_count =0;
 var resumed_count = 0;
 var launched_count = 0;
 
+
 document.addEventListener("deviceready", onDeviceReady, false);
 		
 	
@@ -42,3 +43,10 @@ function updateDisplay() {
 	    
 	alert("resume");
     }
+	
+	var key = "phone";
+    var value = "black";
+	
+	window.localStorage.setItem( key, value );
+	
+	var value = window.localStorage.getItem(key);
