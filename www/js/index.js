@@ -1,15 +1,21 @@
+<!-- For more info on jQuery Mobile,  touch gestures and other useful events see : http://api.jquerymobile.com/category/events/ -->
+
 $(document).on("pagecreate","#pageone",function(){
-  $('#submitButton').on("click", function(){
-    submitText();
-  });            
-});            
+  
+  	$('#tapholdtext').on("taphold",function(){
+    	$(this).hide();
+ 	});                       
 
+	$('#taptext').on("tap",function(){
+    	$(this).css('color', 'red');
+ 	}); 
 
-function submitText() {
-	var text = $('#textinput').val();
-	alert(text);
-}
+	$('#swipetext').on("swipeleft",function(){
+    	$(this).css('color', 'green');
+  	});   
+	
+    $('#swipetext').on("swiperight",function(){
+		$(this).css('color', 'blue');
+	});
 
-function storeValue(key, value) {
-	//add some code to store the key-value pair in persistant storage 
-}
+});
